@@ -27,11 +27,17 @@ module.exports = {
           900: '#191F28',
         },
       },
+      spacing: {
+        hml: '7.8125vw',
+        hml2: '71.14583vw',
+        hml3: '2.5vw',
+      },
       fontFamily: {
         sans: ['Pretendard', ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
-        10: ['0.625rem', { lineHeight: '1rem' }],
+        small: ['rem', { lineHeight: '1rem' }],
+        10: ['0.625rem', { lineHeight: '0.7rem' }],
         11: ['0.6875rem', { lineHeight: '1rem' }],
         12: defaultTheme.fontSize.xs,
         13: ['0.8125rem', { lineHeight: '1.125rem' }],
@@ -54,12 +60,30 @@ module.exports = {
         96: defaultTheme.fontSize['8xl'],
         128: defaultTheme.fontSize['9xl'],
       },
+      width: {
+        wi: '1920px',
+        tew: '6.09375vw',
+        wv: '1.25vw',
+        wlo: '3.38541vw',
+        wad: '41.66666vw',
+      },
       height: {
+        teh: '3.09917vh',
+        he: '4.16666vh',
+        he2: '20vh',
+        he3: '5.5vh',
+        he4: '50vh',
+        hv: '1.65289vh',
+        hlo: '2.06611vh',
+        had: '8.53994',
+        hd2: '24.86225',
+
         screen: '100vh',
         'screen-5': 'calc( 100vh - 5rem )',
         'screen-10': 'calc( 100vh - 10rem )',
         'screen-15': 'calc( 100vh - 15rem )',
       },
+
       minWidth: {
         ...defaultTheme.spacing,
       },
@@ -67,6 +91,9 @@ module.exports = {
         'screen-5': 'calc( 100vh - 5rem )',
         'screen-10': 'calc( 100vh - 10rem )',
         'screen-15': 'calc( 100vh - 15rem )',
+      },
+      marginLeft: {
+        ma: '7.8125vh',
       },
     },
   },

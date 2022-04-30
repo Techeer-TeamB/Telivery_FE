@@ -1,15 +1,8 @@
 {
-  "extends": ["plugin:prettier/recommended", "react-app"],
+  "extends": ["eslint:recommended", "react-app"],
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": 2021
   },
-  "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "endOfLine": "auto"
-      }
-    ]
-  }
+  "rules": {}
 }
