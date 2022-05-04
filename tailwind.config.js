@@ -31,6 +31,11 @@ module.exports = {
         hml: '7.8125vw',
         hml2: '71.14583vw',
         hml3: '2.5vw',
+        hws: '67.29167vw',
+        hms: '1.99724vh',
+        sti: '14.2vw',
+        s1: '3.7vh',
+        s2: '4.7vh',
       },
       fontFamily: {
         sans: ['Pretendard', ...defaultTheme.fontFamily.sans],
@@ -66,17 +71,27 @@ module.exports = {
         wv: '1.25vw',
         wlo: '3.38541vw',
         wad: '41.66666vw',
+        wse: '70.20833vw',
+
+        wS: '13.22916vw',
+
+        wsei: '1.25vw',
+
+        w1: '15.83333vw',
       },
       height: {
         teh: '3.09917vh',
         he: '4.16666vh',
         he2: '20vh',
-        he3: '5.5vh',
-        he4: '50vh',
+        he3: '4.26997vh',
+        he4: '67vh',
         hv: '1.65289vh',
         hlo: '2.06611vh',
-        had: '8.53994',
-        hd2: '24.86225',
+        had: '8.53994vh',
+        hd2: '16.59779vh',
+        hsei: '1.65289vh',
+        hS: '17.49311vh',
+        h1: '1.65289vh',
 
         screen: '100vh',
         'screen-5': 'calc( 100vh - 5rem )',
