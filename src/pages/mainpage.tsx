@@ -1,18 +1,18 @@
-import React from 'react';
-import Telivery from '../images/Teliverylogo.png';
-import Vector1 from '../images/Vector1.png';
-import Address from '../images/Address.png';
-import search from '../images/search.png';
-import 양식 from '../images/양식.png';
-import 한식 from '../images/한식.png';
-import 일식 from '../images/일식.png';
-import 중식 from '../images/중식.png';
-import 치킨 from '../images/치킨.png';
-import 피자 from '../images/피자.png';
-import 디저트 from '../images/디저트.png';
-import 아시안 from '../images/아시안.png';
-import 패스트푸드 from '../images/패스트푸드.png';
-import refresh from '../images/refresh.png';
+import React from "react";
+import Telivery from "@images/Teliverylogo.png";
+import Vector1 from "@images/Vector1.png";
+import Address from "@images/Address.png";
+import search from "@images/search.png";
+import 양식 from "@images/양식.png";
+import 한식 from "@images/한식.png";
+import 일식 from "@images/일식.png";
+import 중식 from "@images/중식.png";
+import 치킨 from "@images/치킨.png";
+import 피자 from "@images/피자.png";
+import 디저트 from "@images/디저트.png";
+import 아시안 from "@images/아시안.png";
+import 패스트푸드 from "@images/패스트푸드.png";
+import refresh from "@images/refresh.png";
 
 const mainpage = () => {
   return (

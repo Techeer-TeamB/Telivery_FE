@@ -20,12 +20,12 @@ export default App;
 
 */
 
-import React from 'react';
-import loadable from '@loadable/component';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from "react";
+import loadable from "@loadable/component";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Mainpage from './pages/mainpage';
-import About from './pages/about';
+import Mainpage from "@pages/mainpage";
+import About from "@pages/about";
 
 const App = () => {
   return (
