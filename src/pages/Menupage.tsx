@@ -54,14 +54,29 @@ const Menupage = () => {
           </select>
         </div>
       </div>
-      <div>
-        {menu.map((name) => (
-          <MenuDiv name={name.name} />
-        ))}
+      <div className="grid justify-items-stretch">
+        <div className="w-w6 h-h5 bg-blue-300 ml-2"></div>
+        <div className="w-w6 h-h5 bg-blue-300 ml-2"></div>
+        <div className="w-w6 h-h5 bg-blue-300 ml-2"></div>
+        <div className="w-w6 h-h5 bg-blue-300 ml-2"></div>
+        <div className="w-w6 h-h5 bg-blue-300 ml-2"></div>
+        <div className="w-w6 h-h5 bg-blue-300 ml-2"></div>
+        <div className="w-w6 h-h5 bg-blue-300 ml-2"></div>
+        <div className="w-w6 h-h5 bg-blue-300 ml-2"></div>
+        <div className="w-w6 h-h5 bg-blue-300 ml-2"></div>
+        <div className="w-w6 h-h5 bg-blue-300 ml-2"></div>
+        <div className="w-w6 h-h5 bg-blue-300 ml-2"></div>
       </div>
+
       <div></div>
     </div>
   );
 };
 
 export default Menupage;
+
+/*
+    {menu.map((name) => (
+          <MenuDiv name={name.name} />
+        ))}
+*/

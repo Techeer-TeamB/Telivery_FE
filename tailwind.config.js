@@ -81,6 +81,9 @@ module.exports = {
         w1: "15.83333vw",
         w2: "28.125vw",
         w3: "13.17708vw",
+
+        w5: "27.1875px",
+        w6: "300px",
       },
       height: {
         teh: "3.09917vh",
@@ -98,6 +101,7 @@ module.exports = {
         h2: "11.68300vh",
         h3: "4.5vh",
         h4: "6.61764vh",
+        h5: "50.48692vh",
 
         screen: "100vh",
         "screen-5": "calc( 100vh - 5rem )",
