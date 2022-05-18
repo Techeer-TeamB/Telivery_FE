@@ -38,13 +38,23 @@ module.exports = {
         s2: "4.7vh",
         s3: "51.61356vw",
         s4: "7.15vh",
+        s5: "5.20833vh",
+        s6: "8.02083vw",
+        s7: "7.02614vh",
+        s8: "3.54166vw",
+        s9: "5.22875vh",
+        s10: "3.59477vh",
+        s11: "1.04501vh",
+        s12: "2.94117vh",
       },
       fontFamily: {
         sans: ["Pretendard", ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
+        smm: ["0.2px", "12px"],
+
         small: ["0.5rem", { lineHeight: "0.5rem" }],
-        fs1: ["0.2rem", { lineHeight: "0.3rem" }],
+        fs1: ["0.3rem", { lineHeight: "0.6rem" }],
         9: ["0.5rem", { lineHeight: "0.5rem" }],
         10: ["0.625rem", { lineHeight: "0.7rem" }],
         11: ["0.6875rem", { lineHeight: "1rem" }],
@@ -82,7 +92,7 @@ module.exports = {
         w2: "28.125vw",
         w3: "13.17708vw",
 
-        w5: "27.1875px",
+        w5: "26vw",
         w6: "300px",
       },
       height: {
@@ -101,7 +111,8 @@ module.exports = {
         h2: "11.68300vh",
         h3: "4.5vh",
         h4: "6.61764vh",
-        h5: "50.48692vh",
+        h5: "46.48692vh",
+        h6: "22.14052vh",
 
         screen: "100vh",
         "screen-5": "calc( 100vh - 5rem )",
