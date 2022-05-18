@@ -24,15 +24,28 @@ import React from "react";
 import loadable from "@loadable/component";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Mainpage from "@pages/mainpage";
-import About from "@pages/about";
+import Mainpage from "@pages/Mainpage";
+import About from "@pages/About";
+import MenuPage from "@pages/Menupage";
 
+/*
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Mainpage />} />
         <Route path="/about" element={<About />} />
+        <Route path="/about" element={<MenuPage />} />
+      </Routes>
+    </Router>
+  );
+};
+*/
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<MenuPage />} />
       </Routes>
     </Router>
   );
