@@ -11,6 +11,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        "teliverycolor":"#2986C3",
         "brand-1": "#7950F2",
         // error: defaultTheme.colors.red[400],
         littleblack: "rgba(0, 0, 0, 0.5)",
@@ -46,6 +47,10 @@ module.exports = {
         s10: "3.59477vh",
         s11: "1.04501vh",
         s12: "2.94117vh",
+        s13: '21.4vw',
+        s14:'0.5vh',
+        s15:'8.3vw',
+        s16:"2.3vh",
       },
       fontFamily: {
         sans: ["Pretendard", ...defaultTheme.fontFamily.sans],
@@ -54,7 +59,7 @@ module.exports = {
         smm: ["0.2px", "12px"],
 
         small: ["0.5rem", { lineHeight: "0.5rem" }],
-        fs1: ["0.3rem", { lineHeight: "0.6rem" }],
+        fs1: ["0.6rem", { lineHeight: "0.6rem" }],
         9: ["0.5rem", { lineHeight: "0.5rem" }],
         10: ["0.625rem", { lineHeight: "0.7rem" }],
         11: ["0.6875rem", { lineHeight: "1rem" }],
@@ -89,11 +94,15 @@ module.exports = {
         wS: "13.22916vw",
         wsei: "1.25vw",
         w1: "15.83333vw",
-        w2: "28.125vw",
+        w2: "26.125vw",
         w3: "13.17708vw",
 
         w5: "26vw",
         w6: "300px",
+        w7:'2vw',
+        w8:'55vw'
+
+
       },
       height: {
         teh: "3.09917vh",
@@ -113,6 +122,8 @@ module.exports = {
         h4: "6.61764vh",
         h5: "46.48692vh",
         h6: "22.14052vh",
+        h7:"3vh",
+        h8:'6vh',
 
         screen: "100vh",
         "screen-5": "calc( 100vh - 5rem )",
