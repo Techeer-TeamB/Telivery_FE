@@ -1,13 +1,43 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 
 import { useState } from "react";
 
 import Header from "@components/Header";
 import categoryim from "@images/categoryim.png";
-import MenuDiv from "@components/MenuDiv";
 import sms from "@images/sms.png";
 import star from "@images/star.png";
+import { Theme } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Switch from '@mui/material/Switch';
+import Paper from '@mui/material/Paper';
+import Grow from '@mui/material/Grow';
+import FormControlLabel from '@mui/material/FormControlLabel';
 
+
+const icon = (
+  <div className="mt-3 bg-teliverycolor rounded-r-full bg-teliverycolor w-w8 h-h8 " >
+    <div className="mx-20 mt-3 flex justify-around ">
+    <button className = "text-white ">
+      한식
+    </button>
+    <button className = "text-white">
+      중식
+    </button>
+    <button className = "text-white">
+      일식
+    </button>
+    <button className = "text-white">
+      양식
+    </button>
+    <button className = "text-white">
+      치킨
+    </button>
+    </div>
+ 
+  </div>
+
+);
 const menu = [
   {
     name: "원할머니 보쌈.족발",
@@ -75,6 +105,13 @@ const menu = [
 ];
 
 const Menupage = () => {
+
+  const [checked, setChecked] = React.useState(false);
+
+  const handleChange = () => {
+    setChecked((prev) => !prev);
+  };
+  
   const [Add, setAddress] = useState("");
   const onIncrease = () => {
     setAddress(Add);
@@ -111,13 +148,20 @@ const Menupage = () => {
       <Header></Header>
       <div className="w-full h-h4"></div>
       <div className="w-full h-h2  flex flex-row">
-        <div className="w-w2 h-h2  rounded-r-full">
+        <div className="w-w2 h-h2  rounded-r-full flex items-center flex justify-center">
           <img className=" w-w2 h-full" src={categoryim} alt="categoryim" />
-        </div>
+          <text className= "text-24 text-white mt-s14 font-bold mr-s15 absolute">한식</text>
+          <text className= "text-xs text-white mt-s16 ml-s14 font-bold absolute">KoreanFood</text>        
+          <div className="absolute h-h7 w-w7 mt-s14 ml-s13 ">
+          <button className="h-h7 w-w7"onClick={handleChange}></button>
+          </div>
+      
+      
+      </div>
 
         <div className="w-w3 h-h3 ml-s3 mt-s4">
           <select
-            className="w-w3 h-7 text-fs1 flex items-center"
+            className="w-w3 h-h3 text-fs1 flex items-center"
             defaultValue={"정렬 순"}
           >
             <option className="text-center" value="정렬 순">
@@ -135,6 +179,13 @@ const Menupage = () => {
           </select>
         </div>
       </div>
+      <div>
+      <Box sx={{ display: 'flex' }}>
+        <Grow in={checked}>{icon}</Grow>
+        {/* Conditionally applies the timeout prop to change the entry speed. */}
+      </Box>
+      </div>
+
 
       <div className="w-full overflow-auto">
         <div className="mt-s5 mx-s6">{menuList}</div>
@@ -148,14 +199,14 @@ const Menupage = () => {
           <button className="">5</button>
         </div>
       </div>
+      <div>
+ 
+
+    </div>
+
     </div>
   );
 };
 
 export default Menupage;
 
-/*
-    {menu.map((name) => (
-          <MenuDiv name={name.name} />
-        ))}
-*/
