@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from "react";
+import React, { useEffect } from "react";
 
 import { useState } from "react";
 
@@ -13,6 +13,34 @@ import Switch from '@mui/material/Switch';
 import Paper from '@mui/material/Paper';
 import Grow from '@mui/material/Grow';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import axios from "axios";
+
+
+
+
+
+const GetMenu = () =>{
+  var axios = require('axios');
+
+  var config = {
+    method: 'get',
+    url: 'localhost:8080/api/v1/categories',
+    headers: { }
+  };
+  
+  axios(config)
+  .then(function (response:any) {
+    console.log(JSON.stringify(response.data));
+    return response.data;
+
+  })
+  .catch(function (error:any) {
+    console.log(error);
+  });
+
+}
+
+
 
 
 const icon = (
@@ -104,7 +132,17 @@ const menu = [
   },
 ];
 
+let getmenu;
+  
 const Menupage = () => {
+  
+  useEffect(() => {
+    // 브라우저 API를 이용하여 문서 타이틀을 업데이트합니다.
+      getmenu = GetMenu();
+      console.log(getmenu);
+    
+
+  });
 
   const [checked, setChecked] = React.useState(false);
 
