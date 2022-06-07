@@ -53,6 +53,11 @@ module.exports = {
         s16:"2.3vh",
         s17:"50vh",
         s18: "45vw",
+        s19:"7vh",
+        s20:"4vw",
+        s21:"7.9vw",
+        s22:"8vh",
+        s23:"84vw",
 
 
 
@@ -109,6 +114,15 @@ module.exports = {
         w7:'2vw',
         w8:'55vw',
         w9: "50vw",
+        w10:"50vw",
+        w11:"25vw",
+        w12:"53vw",
+        w13:"17vw",
+        w14:"11vw",
+        w15:"52vw",
+        w16:"13vw",
+        w17:"12vw",
+        
 
 
 
@@ -133,7 +147,18 @@ module.exports = {
         h6: "22.14052vh",
         h7:"3vh",
         h8:'6vh',
+        h9:"40vh",
+        h10:"5vh",
+        h11:"20vh",
+        h12:"100vh",
+        h13:"4vh",
+        h14:"75vh",
+        h15:"40vh",
+        h16:"33vh",
+        h17:"34vh",
+        h18:"17vh",
 
+        
         screen: "100vh",
         "screen-5": "calc( 100vh - 5rem )",
         "screen-10": "calc( 100vh - 10rem )",
