@@ -27,6 +27,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Mainpage from "@pages/Mainpage";
 import About from "@pages/About";
 import MenuPage from "@pages/Menupage";
+import Addresspage from "@pages/Addresspage"
 
 /*
 const App = () => {
@@ -45,7 +46,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<MenuPage />} />
+        <Route path="/" element={<Addresspage />} />
       </Routes>
     </Router>
   );

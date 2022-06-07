@@ -1,13 +1,13 @@
 import React from "react";
-import 양식 from "@images/양식.png";
-import 한식 from "@images/한식.png";
-import 일식 from "@images/일식.png";
-import 중식 from "@images/중식.png";
-import 치킨 from "@images/치킨.png";
-import 피자 from "@images/피자.png";
-import 디저트 from "@images/디저트.png";
-import 아시안 from "@images/아시안.png";
-import 패스트푸드 from "@images/패스트푸드.png";
+import 양식 from "@images/i1.png";
+import 한식 from "@images/i2.png";
+import 일식 from "@images/i3.png";
+import 중식 from "@images/i4.png";
+import 치킨 from "@images/i5.png";
+import 피자 from "@images/i6.png";
+import 디저트 from "@images/i7.png";
+import 아시안 from "@images/i8.png";
+import 패스트푸드 from "@images/i9.png";
 
 const Category = (props: any) => {
   return (

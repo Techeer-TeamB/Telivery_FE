@@ -51,6 +51,13 @@ module.exports = {
         s14:'0.5vh',
         s15:'8.3vw',
         s16:"2.3vh",
+        s17:"50vh",
+        s18: "45vw",
+
+
+
+
+
       },
       fontFamily: {
         sans: ["Pretendard", ...defaultTheme.fontFamily.sans],
@@ -100,7 +107,9 @@ module.exports = {
         w5: "26vw",
         w6: "300px",
         w7:'2vw',
-        w8:'55vw'
+        w8:'55vw',
+        w9: "50vw",
+
 
 
       },

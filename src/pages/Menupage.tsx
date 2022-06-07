@@ -40,9 +40,6 @@ const GetMenu = () =>{
 
 }
 
-
-
-
 const icon = (
   <div className="mt-3 bg-teliverycolor rounded-r-full bg-teliverycolor w-w8 h-h8 " >
     <div className="mx-20 mt-3 flex justify-around ">
@@ -140,7 +137,6 @@ const Menupage = () => {
     // 브라우저 API를 이용하여 문서 타이틀을 업데이트합니다.
       getmenu = GetMenu();
       console.log(getmenu);
-    
 
   });
 
