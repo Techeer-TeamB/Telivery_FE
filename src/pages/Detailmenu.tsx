@@ -18,7 +18,10 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import CallIcon from "@mui/icons-material/Call";
 import sms from "@images/sms.png";
 import star from "@images/star.png";
+import star2 from "@images/star2.png";
+
 import styled from "styled-components";
+import { useLocation } from "react-router";
 
 const customStyles = {
   content: {
@@ -122,7 +125,7 @@ function Addresspage() {
   const [menuisOpen, setMenuOpen] = useState(true);
   const [reviewisOpen, setReviewOpen] = useState(false);
   const [restinfoisOpen, setRestinfoOpen] = useState(false);
-  const [color1, setColor1] = useState("#64AAFF");
+  const [color1, setColor1] = useState("#2986C3");
   const [color2, setColor2] = useState("#64AAFF");
   const [color3, setColor3] = useState("#64AAFF");
 
@@ -229,9 +232,17 @@ function Addresspage() {
   ));
 
   const reviewList = menu2.map((menu) => (
-    <div className="float-left w-w21 h-h21   flex flex-col flex justify-start  shadow-lg">
+    <div className="float-left w-w21 h-h21   flex flex-col flex justify-start  shadow-lg ml-10 mt-10">
       <div className="mt-2">{menu.name}</div>
-      <div className="mt-2">⭐ ⭐ ⭐ ⭐ ⭐</div>
+      <div className="flex flex-row mt-2">
+        <img className="h-4 w-4  " src={star} alt="star" />
+        <img className="h-4 w-4  " src={star} alt="star" />
+        <img className="h-4 w-4  " src={star} alt="star" />
+        <img className="h-4 w-4  " src={star} alt="star" />
+        <img className="h-4 w-4  " src={star} alt="star" />
+      </div>
+
+      <div className="mt-2"></div>
 
       <div className="w-w22 h-h22 mt-1">
         <img
@@ -269,7 +280,8 @@ function Addresspage() {
                 className="w-18 h-h20 mt-2"
                 src="http://www.bapsangnews.com/repository/image/jpeg/8/d/8d81bf9f74b9c569665382b46f1970c1000001eb15"
               ></img>
-              <div className="w-w19 mt-5 text-white">
+
+              <div className="w-w19 mt-5 text-black-700">
                 원할머니 본점은 1975년 서울 청계 8가 황학동 끝자락에 작고 소박한
                 보쌈집으로 시작하였습니다. 따뜻한 보쌈 고기와 아삭한 보쌈 김치는
                 할머니의 특별한 정성과 손맛이 더해져 수많은 이들의 입맛을
@@ -277,43 +289,44 @@ function Addresspage() {
                 변함없이 원할머니 본점은 그 시절 할머니의 비법과 마음을 고스란히
                 이어가며
               </div>
+              <div className="mr-60">
+                <div className="mt-10 text-xl">필수선택사항</div>
 
-              <div>필수선택사항</div>
-
-              <div className="flex flex-row">
-                <div>마늘 양</div>
-                <div className="ml-2">
-                  <input className="rounded-lg mr-2" type="checkbox"></input>
-                  마늘적게
-                  <input
-                    className="rounded-lg ml-2 mr-2"
-                    type="checkbox"
-                  ></input>
-                  마늘중간
-                  <input
-                    className="rounded-lg ml-2 mr-2"
-                    type="checkbox"
-                  ></input>
-                  마늘많이
+                <div className="flex flex-row">
+                  <div>마늘 양</div>
+                  <div className="ml-2">
+                    <input className="rounded-lg mr-2" type="checkbox"></input>
+                    마늘적게
+                    <input
+                      className="rounded-lg ml-2 mr-2"
+                      type="checkbox"
+                    ></input>
+                    마늘중간
+                    <input
+                      className="rounded-lg ml-2 mr-2"
+                      type="checkbox"
+                    ></input>
+                    마늘많이
+                  </div>
                 </div>
-              </div>
 
-              <div>추가 선택 사항</div>
-              <div className="flex flex-row">
-                <div>사이드 메뉴</div>
-                <div className="ml-2">
-                  <input className="rounded-lg mr-2" type="checkbox"></input>
-                  보쌈 1p 추가 + 6000원
-                  <input
-                    className="rounded-lg ml-2 mr-2"
-                    type="checkbox"
-                  ></input>
-                  국수 + 5000원
-                  <input
-                    className="rounded-lg ml-2 mr-2"
-                    type="checkbox"
-                  ></input>
-                  백김치 +1500원
+                <div className="text-xl mt-6">추가 선택 사항</div>
+                <div className="flex flex-row">
+                  <div>사이드 메뉴</div>
+                  <div className="ml-2">
+                    <input className="rounded-lg mr-2" type="checkbox"></input>
+                    보쌈 1p 추가 + 6000원
+                    <input
+                      className="rounded-lg ml-2 mr-2"
+                      type="checkbox"
+                    ></input>
+                    국수 + 5000원
+                    <input
+                      className="rounded-lg ml-2 mr-2"
+                      type="checkbox"
+                    ></input>
+                    백김치 +1500원
+                  </div>
                 </div>
               </div>
             </div>
@@ -331,7 +344,13 @@ function Addresspage() {
         <img className="h-h9 w-w10 " src={detailmenu} alt="detailmenu" />
         <div className="ml-10 mt-10">
           <div className="text-30">원할머니 보쌈, 족발</div>
-          <div className="mt-2">⭐ ⭐ ⭐ ⭐ ⭐</div>
+          <div className="flex flex-row mt-2">
+            <img className="h-5 w-5  " src={star2} alt="star2" />
+            <img className="h-5 w-5  " src={star2} alt="star2" />
+            <img className="h-5 w-5  " src={star2} alt="star2" />
+            <img className="h-5 w-5  " src={star2} alt="star2" />
+            <img className="h-5 w-5  " src={star2} alt="star2" />
+          </div>
           <div className="flex flex-row mt-6">
             <div className="text-xs">최소배달금액</div>
             <div className="ml-20 text-xs">12000원</div>
@@ -407,7 +426,18 @@ function Addresspage() {
               <div>
                 <div>
                   <div className="mt-6 text-15 text-bo font-bold">REVIEW</div>
-                  <div className="float-left w-w15 h-h14   flex flex-col flex items-center shadow-lg">
+                  <div className="flex flex-row mt-2">
+                    <text className="text-[#FD927D]">
+                      4.5 &nbsp;&nbsp;&nbsp;
+                    </text>
+                    <img className="h-5 w-5  " src={star} alt="star" />
+                    <img className="h-5 w-5  " src={star} alt="star" />
+                    <img className="h-5 w-5  " src={star} alt="star" />
+                    <img className="h-5 w-5  " src={star} alt="star" />
+                    <img className="h-5 w-5  " src={star} alt="star" />
+                  </div>
+
+                  <div className="float-left w-w15 h-h14   flex flex-col flex items-center">
                     <div className="">{reviewList}</div>
                   </div>
                 </div>

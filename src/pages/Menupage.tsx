@@ -7,61 +7,52 @@ import Header from "@components/Header";
 import categoryim from "@images/categoryim.png";
 import sms from "@images/sms.png";
 import star from "@images/star.png";
-import { Theme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Switch from '@mui/material/Switch';
-import Paper from '@mui/material/Paper';
-import Grow from '@mui/material/Grow';
-import FormControlLabel from '@mui/material/FormControlLabel';
+import { Theme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Switch from "@mui/material/Switch";
+import Paper from "@mui/material/Paper";
+import Grow from "@mui/material/Grow";
+import FormControlLabel from "@mui/material/FormControlLabel";
 import axios from "axios";
+import { json } from "stream/consumers";
+import { useLocation } from "react-router-dom";
 
+var getmenu = [
+  { name: 1, id: 1, fee: 100, point: 100, comment: "1234", min: 123 },
+];
 
-
-
-
-const GetMenu = () =>{
-  var axios = require('axios');
+async function GetMenu() {
+  var axios = require("axios");
 
   var config = {
-    method: 'get',
-    url: 'localhost:8080/api/v1/categories',
-    headers: { }
+    method: "get",
+    url: "http://localhost:8000/api/v1/categories",
+    headers: {
+      Authorization:
+        "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MyIsImF1dGgiOiJST0xFX1VTRVIiLCJpYXQiOjE2NTg0MjI5NjgsImV4cCI6OTAwMDAxNjU4NDIyOTY4fQ.JcTka7BBhMoZ8_PwIKzvyjsi2TX4W-reYGykkim5p8JRlhuJp6z6m7deTbhnY1dWt7C-7iebPUJBBZzXm9kR1Q",
+    },
   };
-  
-  axios(config)
-  .then(function (response:any) {
-    console.log(JSON.stringify(response.data));
-    return response.data;
 
-  })
-  .catch(function (error:any) {
-    console.log(error);
-  });
-
+  await axios(config)
+    .then(function (response: any) {
+      getmenu = response.data;
+      console.log(JSON.stringify(response.data));
+    })
+    .catch(function (error: any) {
+      console.log(error);
+    });
 }
 
 const icon = (
-  <div className="mt-3 bg-teliverycolor rounded-r-full bg-teliverycolor w-w8 h-h8 " >
+  <div className="mt-3 bg-teliverycolor rounded-r-full bg-teliverycolor w-w8 h-h8 ">
     <div className="mx-20 mt-3 flex justify-around ">
-    <button className = "text-white ">
-      한식
-    </button>
-    <button className = "text-white">
-      중식
-    </button>
-    <button className = "text-white">
-      일식
-    </button>
-    <button className = "text-white">
-      양식
-    </button>
-    <button className = "text-white">
-      치킨
-    </button>
+      <button className="text-white ">한식</button>
+      <button className="text-white">중식</button>
+      <button className="text-white">일식</button>
+      <button className="text-white">양식</button>
+      <button className="text-white">치킨</button>
     </div>
- 
   </div>
-
 );
 const menu = [
   {
@@ -129,15 +120,23 @@ const menu = [
   },
 ];
 
-let getmenu;
-  
 const Menupage = () => {
-  
-  useEffect(() => {
-    // 브라우저 API를 이용하여 문서 타이틀을 업데이트합니다.
-      getmenu = GetMenu();
-      console.log(getmenu);
+  interface RouteState {
+    state: {
+      name: string;
+    };
+  }
+  const location = useLocation() as RouteState;
 
+  const me = location.state.name;
+  console.log(me);
+
+  useEffect(() => {
+    async function fetchdata() {
+      await GetMenu();
+      await console.log(getmenu);
+    }
+    fetchdata();
   });
 
   const [checked, setChecked] = React.useState(false);
@@ -145,12 +144,14 @@ const Menupage = () => {
   const handleChange = () => {
     setChecked((prev) => !prev);
   };
-  
+
   const [Add, setAddress] = useState("");
   const onIncrease = () => {
     setAddress(Add);
   };
-  const menuList = menu.map((menu) => (
+
+  console.log(getmenu[0]);
+  const menuList = getmenu.map((menu) => (
     <div className="float-left w-w5 h-h5  mx-2 flex flex-col flex items-center my-2 shadow-lg">
       <div className="w-20 h-20 mt-s9">
         <img
@@ -184,14 +185,16 @@ const Menupage = () => {
       <div className="w-full h-h2  flex flex-row">
         <div className="w-w2 h-h2  rounded-r-full flex items-center flex justify-center">
           <img className=" w-w2 h-full" src={categoryim} alt="categoryim" />
-          <text className= "text-24 text-white mt-s14 font-bold mr-s15 absolute">한식</text>
-          <text className= "text-xs text-white mt-s16 ml-s14 font-bold absolute">KoreanFood</text>        
+          <text className="text-24 text-white mt-s14 font-bold mr-s15 absolute">
+            {me}
+          </text>
+          <text className="text-xs text-white mt-s16 ml-s14 font-bold absolute">
+            KoreanFood
+          </text>
           <div className="absolute h-h7 w-w7 mt-s14 ml-s13 ">
-          <button className="h-h7 w-w7"onClick={handleChange}></button>
+            <button className="h-h7 w-w7" onClick={handleChange}></button>
           </div>
-      
-      
-      </div>
+        </div>
 
         <div className="w-w3 h-h3 ml-s3 mt-s4">
           <select
@@ -214,12 +217,11 @@ const Menupage = () => {
         </div>
       </div>
       <div>
-      <Box sx={{ display: 'flex' }}>
-        <Grow in={checked}>{icon}</Grow>
-        {/* Conditionally applies the timeout prop to change the entry speed. */}
-      </Box>
+        <Box sx={{ display: "flex" }}>
+          <Grow in={checked}>{icon}</Grow>
+          {/* Conditionally applies the timeout prop to change the entry speed. */}
+        </Box>
       </div>
-
 
       <div className="w-full overflow-auto">
         <div className="mt-s5 mx-s6">{menuList}</div>
@@ -233,14 +235,9 @@ const Menupage = () => {
           <button className="">5</button>
         </div>
       </div>
-      <div>
- 
-
-    </div>
-
+      <div></div>
     </div>
   );
 };
 
 export default Menupage;
-

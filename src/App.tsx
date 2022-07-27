@@ -24,7 +24,7 @@ import React from "react";
 import loadable from "@loadable/component";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Mainpage from "@pages/Mainpage";
+import MainPage from "@pages/Mainpage";
 import About from "@pages/About";
 import MenuPage from "@pages/Menupage";
 import Addresspage from "@pages/Addresspage";
@@ -47,7 +47,8 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Detailmenu />} />
+        <Route path="/" element={<MainPage />} />
+        <Route path="/Menupage" element={<MenuPage />} />
       </Routes>
     </Router>
   );
