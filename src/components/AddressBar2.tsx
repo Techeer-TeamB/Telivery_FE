@@ -6,14 +6,14 @@ const SearchBar = (props: any) => {
     <div className="flex items-center flex justify-center h-he3 align-">
       <div>
         <input
-          className="w-wse h-he3 rounded-full bg-transparent text-center text-xs		"
+          className="w-w9 h-he3 rounded-full bg-transparent text-center text-xs		"
           type="text"
           id="lname"
           name="lname"
         ></input>
       </div>
       <div
-        className="absolute ml-hws
+        className="absolute ml-s18
        float-right w-wsei h-hsei"
       >
         <img src={search} alt="search" />

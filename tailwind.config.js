@@ -11,6 +11,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        "teliverycolor":"#2986C3",
         "brand-1": "#7950F2",
         // error: defaultTheme.colors.red[400],
         littleblack: "rgba(0, 0, 0, 0.5)",
@@ -38,13 +39,42 @@ module.exports = {
         s2: "4.7vh",
         s3: "51.61356vw",
         s4: "7.15vh",
+        s5: "5.20833vh",
+        s6: "8.02083vw",
+        s7: "7.02614vh",
+        s8: "3.54166vw",
+        s9: "5.22875vh",
+        s10: "3.59477vh",
+        s11: "1.04501vh",
+        s12: "2.94117vh",
+        s13: '21.4vw',
+        s14:'0.5vh',
+        s15:'8.3vw',
+        s16:"2.3vh",
+        s17:"50vh",
+        s18: "45vw",
+        s19:"7vh",
+        s20:"4vw",
+        s21:"7.9vw",
+        s22:"8vh",
+        s23:"84vw",
+        s24:"70vw",
+        s25:"35vw",
+        s26:"20vw",
+
+
+
+
+
       },
       fontFamily: {
         sans: ["Pretendard", ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
+        smm: ["0.2px", "12px"],
+
         small: ["0.5rem", { lineHeight: "0.5rem" }],
-        fs1: ["0.2rem", { lineHeight: "0.3rem" }],
+        fs1: ["0.6rem", { lineHeight: "0.6rem" }],
         9: ["0.5rem", { lineHeight: "0.5rem" }],
         10: ["0.625rem", { lineHeight: "0.7rem" }],
         11: ["0.6875rem", { lineHeight: "1rem" }],
@@ -79,11 +109,31 @@ module.exports = {
         wS: "13.22916vw",
         wsei: "1.25vw",
         w1: "15.83333vw",
-        w2: "28.125vw",
+        w2: "26.125vw",
         w3: "13.17708vw",
 
-        w5: "27.1875px",
+        w5: "26vw",
         w6: "300px",
+        w7:'2vw',
+        w8:'55vw',
+        w9: "50vw",
+        w10:"50vw",
+        w11:"25vw",
+        w12:"53vw",
+        w13:"17vw",
+        w14:"11vw",
+        w15:"52vw",
+        w16:"13vw",
+        w17:"12vw",
+        w18:"10vw",
+        w19:"50vw",
+        w20:"30vw",
+        w21:"50vw",
+        w22:"50vw",
+        
+
+
+
       },
       height: {
         teh: "3.09917vh",
@@ -101,8 +151,28 @@ module.exports = {
         h2: "11.68300vh",
         h3: "4.5vh",
         h4: "6.61764vh",
-        h5: "50.48692vh",
+        h5: "46.48692vh",
+        h6: "22.14052vh",
+        h7:"3vh",
+        h8:'6vh',
+        h9:"40vh",
+        h10:"5vh",
+        h11:"20vh",
+        h12:"100vh",
+        h13:"4vh",
+        h14:"100vh",
+        h15:"40vh",
+        h16:"33vh",
+        h17:"34vh",
+        h18:"17vh",
+        h19:"90vh",
+        h20:"35vh",
+        h21:"55vh",
+        h22:"35vh",
+        h23:"20vh",
+      
 
+        
         screen: "100vh",
         "screen-5": "calc( 100vh - 5rem )",
         "screen-10": "calc( 100vh - 10rem )",
